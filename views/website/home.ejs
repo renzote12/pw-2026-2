@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechComputers - Home</title>
+
+    <title>Amor & Relax | Habitaciones por horas</title>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <style>
         body {
-            background-color: #f5f7fb;
+            background-color: #120b12;
+            color: #fff;
             font-family: Arial, sans-serif;
         }
 
         .navbar {
-            background: #111827;
+            background: #090609;
         }
 
         .navbar-brand {
+            color: #ff4f81 !important;
             font-weight: bold;
-            color: #00bfff !important;
+            font-size: 1.5rem;
         }
 
         .nav-link {
@@ -31,67 +34,122 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #111827, #2563eb);
-            color: white;
-            padding: 100px 0;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(20, 5, 15, .65), rgba(20, 5, 15, .85)),
+                url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1600&q=85")
+                center/cover;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 4rem;
+            font-weight: 800;
         }
 
-        .hero img {
-            max-height: 350px;
-            object-fit: contain;
+        .hero span {
+            color: #ff4f81;
+        }
+
+        .btn-love {
+            background: #e91e63;
+            color: #fff;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 30px;
+        }
+
+        .btn-love:hover {
+            background: #c2185b;
+            color: #fff;
         }
 
         .section-title {
             font-weight: 700;
-            color: #111827;
         }
 
-        .category-card,
-        .product-card {
-            border: none;
-            border-radius: 15px;
-            transition: 0.3s;
-            background: white;
+        .section-title span {
+            color: #ff4f81;
         }
 
-        .category-card:hover,
-        .product-card:hover {
+        .room-card {
+            background: #21141f;
+            border: 1px solid #3a2535;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .3s;
+            height: 100%;
+        }
+
+        .room-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,.12);
+            box-shadow: 0 15px 35px rgba(233, 30, 99, .25);
         }
 
-        .category-icon {
-            font-size: 45px;
-            color: #2563eb;
+        .room-card img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
         }
 
-        .product-card img {
-            height: 220px;
-            object-fit: contain;
-            padding: 20px;
+        .room-body {
+            padding: 25px;
+        }
+
+        .room-title {
+            color: #ff6b96;
+            font-weight: bold;
         }
 
         .price {
-            color: #2563eb;
+            color: #fff;
             font-size: 1.4rem;
             font-weight: bold;
         }
 
-        .benefit {
-            background: white;
-            border-radius: 15px;
+        .badge-love {
+            background: #e91e63;
+        }
+
+        .features {
+            background: #1a1019;
+        }
+
+        .feature-box {
+            background: #251722;
             padding: 30px;
+            border-radius: 15px;
             height: 100%;
         }
 
+        .feature-box i {
+            color: #ff4f81;
+            font-size: 42px;
+        }
+
+        .reservation {
+            background:
+                linear-gradient(rgba(70, 10, 40, .8), rgba(70, 10, 40, .8)),
+                url("https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .form-control,
+        .form-select {
+            background: #fff;
+            border: none;
+            padding: 13px;
+        }
+
         footer {
-            background: #111827;
-            color: white;
+            background: #090609;
+        }
+
+        .social i {
+            font-size: 22px;
+            margin-right: 15px;
+            color: #ff4f81;
         }
     </style>
 </head>
@@ -99,37 +157,49 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand fs-4" href="#">
-            <i class="bi bi-pc-display"></i> TechComputers
+
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-heart-fill"></i>
+            Amor & Relax
         </a>
 
-        <button class="navbar-toggler" type="button"
+        <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
                 <li class="nav-item">
                     <a class="nav-link" href="#inicio">Inicio</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#categorias">Categorías</a>
+                    <a class="nav-link" href="#habitaciones">Habitaciones</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#productos">Computadoras</a>
+                    <a class="nav-link" href="#servicios">Servicios</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
+                    <a class="nav-link" href="#reservas">Reservas</a>
                 </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a href="#reservas" class="btn btn-love">
+                        Reservar ahora
+                    </a>
+                </li>
+
             </ul>
 
-            <button class="btn btn-primary ms-lg-3">
-                <i class="bi bi-cart3"></i> Comprar
-            </button>
         </div>
     </div>
 </nav>
@@ -137,341 +207,637 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
-    <div class="container">
-        <div class="row align-items-center">
 
-            <div class="col-lg-6">
-                <span class="badge bg-info text-dark mb-3">
-                    Tecnología de última generación
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <span class="fs-5">
+                    <i class="bi bi-heart-fill"></i>
+                    Momentos para recordar
                 </span>
 
-                <h1>Encuentra la computadora perfecta para ti</h1>
+                <h1 class="mt-3">
+                    Tu privacidad,<br>
+                    nuestro compromiso.
+                </h1>
 
-                <p class="lead mt-3">
-                    Laptops, PC Gamer, computadoras de oficina y accesorios
-                    con la mejor tecnología y rendimiento.
+                <p class="lead mt-4">
+                    Habitaciones privadas por horas, diseñadas para
+                    disfrutar momentos especiales en pareja con comodidad,
+                    discreción y excelente servicio.
                 </p>
 
                 <div class="mt-4">
-                    <a href="#productos" class="btn btn-light btn-lg me-2">
-                        Ver computadoras
+                    <a href="#habitaciones" class="btn btn-love btn-lg me-2">
+                        Ver habitaciones
                     </a>
 
-                    <a href="#categorias" class="btn btn-outline-light btn-lg">
-                        Explorar
+                    <a href="#reservas"
+                       class="btn btn-outline-light btn-lg rounded-pill">
+                        Reservar
                     </a>
                 </div>
-            </div>
 
-            <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                <img
-                    src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80"
-                    class="img-fluid rounded-4 shadow"
-                    alt="Computadora">
             </div>
 
         </div>
+
     </div>
 </section>
 
 
-<!-- CATEGORÍAS -->
-<section class="py-5" id="categorias">
+<!-- HABITACIONES -->
+<section class="py-5" id="habitaciones">
+
     <div class="container">
 
         <div class="text-center mb-5">
-            <h2 class="section-title">Explora nuestras categorías</h2>
-            <p class="text-muted">
-                Tenemos equipos para cada necesidad
+
+            <h2 class="section-title">
+                Nuestras <span>habitaciones</span>
+            </h2>
+
+            <p class="text-secondary">
+                Elige el ambiente perfecto para tu momento especial.
             </p>
+
         </div>
 
         <div class="row g-4">
 
+
+            <!-- HABITACIÓN 1 -->
             <div class="col-md-6 col-lg-3">
-                <div class="category-card text-center p-4 h-100">
-                    <i class="bi bi-laptop category-icon"></i>
-                    <h4 class="mt-3">Laptops</h4>
-                    <p class="text-muted">
-                        Equipos portátiles para trabajo y estudio.
-                    </p>
-                    <button class="btn btn-outline-primary">
-                        Ver más
-                    </button>
+
+                <div class="room-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=900&q=80"
+                        alt="Habitación Clásica">
+
+                    <div class="room-body">
+
+                        <span class="badge badge-love mb-2">
+                            Clásica
+                        </span>
+
+                        <h4 class="room-title">
+                            Habitación Clásica
+                        </h4>
+
+                        <p class="text-secondary">
+                            Un espacio acogedor y privado para
+                            disfrutar de una experiencia tranquila.
+                        </p>
+
+                        <ul class="list-unstyled text-secondary">
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Cama matrimonial
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                TV
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Baño privado
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mt-4">
+
+                            <span class="price">
+                                S/ 50
+                            </span>
+
+                            <a href="#reservas"
+                               class="btn btn-love">
+                                Reservar
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
+
+            <!-- HABITACIÓN 2 -->
             <div class="col-md-6 col-lg-3">
-                <div class="category-card text-center p-4 h-100">
-                    <i class="bi bi-pc-display-horizontal category-icon"></i>
-                    <h4 class="mt-3">PC Gamer</h4>
-                    <p class="text-muted">
-                        Máximo rendimiento para tus videojuegos.
-                    </p>
-                    <button class="btn btn-outline-primary">
-                        Ver más
-                    </button>
+
+                <div class="room-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
+                        alt="Habitación Premium">
+
+                    <div class="room-body">
+
+                        <span class="badge badge-love mb-2">
+                            Premium
+                        </span>
+
+                        <h4 class="room-title">
+                            Habitación Premium
+                        </h4>
+
+                        <p class="text-secondary">
+                            Ambiente elegante con detalles pensados
+                            para una velada especial.
+                        </p>
+
+                        <ul class="list-unstyled text-secondary">
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Cama King
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Smart TV
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Aire acondicionado
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mt-4">
+
+                            <span class="price">
+                                S/ 80
+                            </span>
+
+                            <a href="#reservas"
+                               class="btn btn-love">
+                                Reservar
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
+
+            <!-- HABITACIÓN 3 -->
             <div class="col-md-6 col-lg-3">
-                <div class="category-card text-center p-4 h-100">
-                    <i class="bi bi-display category-icon"></i>
-                    <h4 class="mt-3">Monitores</h4>
-                    <p class="text-muted">
-                        Pantallas con gran resolución y calidad.
-                    </p>
-                    <button class="btn btn-outline-primary">
-                        Ver más
-                    </button>
+
+                <div class="room-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80"
+                        alt="Habitación Jacuzzi">
+
+                    <div class="room-body">
+
+                        <span class="badge badge-love mb-2">
+                            Relax
+                        </span>
+
+                        <h4 class="room-title">
+                            Suite Jacuzzi
+                        </h4>
+
+                        <p class="text-secondary">
+                            Una experiencia de relajación con
+                            jacuzzi privado y ambiente romántico.
+                        </p>
+
+                        <ul class="list-unstyled text-secondary">
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Cama King
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Jacuzzi privado
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Iluminación ambiental
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mt-4">
+
+                            <span class="price">
+                                S/ 120
+                            </span>
+
+                            <a href="#reservas"
+                               class="btn btn-love">
+                                Reservar
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
+
+            <!-- HABITACIÓN 4 -->
             <div class="col-md-6 col-lg-3">
-                <div class="category-card text-center p-4 h-100">
-                    <i class="bi bi-keyboard category-icon"></i>
-                    <h4 class="mt-3">Accesorios</h4>
-                    <p class="text-muted">
-                        Teclados, mouse, audífonos y mucho más.
-                    </p>
-                    <button class="btn btn-outline-primary">
-                        Ver más
-                    </button>
+
+                <div class="room-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=900&q=80"
+                        alt="Suite VIP">
+
+                    <div class="room-body">
+
+                        <span class="badge badge-love mb-2">
+                            VIP
+                        </span>
+
+                        <h4 class="room-title">
+                            Suite VIP
+                        </h4>
+
+                        <p class="text-secondary">
+                            Nuestra habitación exclusiva para
+                            quienes buscan una experiencia premium.
+                        </p>
+
+                        <ul class="list-unstyled text-secondary">
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Cama King
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Jacuzzi
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle text-danger"></i>
+                                Bar privado
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mt-4">
+
+                            <span class="price">
+                                S/ 180
+                            </span>
+
+                            <a href="#reservas"
+                               class="btn btn-love">
+                                Reservar
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 
-<!-- PRODUCTOS -->
-<section class="py-5 bg-light" id="productos">
+<!-- SERVICIOS -->
+<section class="features py-5" id="servicios">
+
     <div class="container">
 
         <div class="text-center mb-5">
-            <h2 class="section-title">Computadoras destacadas</h2>
-            <p class="text-muted">
-                Descubre nuestros equipos más populares
-            </p>
+
+            <h2 class="section-title">
+                Todo pensado para <span>ustedes</span>
+            </h2>
+
         </div>
 
         <div class="row g-4">
 
-            <!-- PRODUCTO 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-sm">
+            <div class="col-md-4">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80"
-                        class="card-img-top"
-                        alt="Laptop">
+                <div class="feature-box text-center">
 
-                    <div class="card-body">
-                        <span class="badge bg-primary">Laptop</span>
+                    <i class="bi bi-shield-lock"></i>
 
-                        <h4 class="card-title mt-2">
-                            Laptop Pro 15
-                        </h4>
+                    <h4 class="mt-3">
+                        Privacidad
+                    </h4>
 
-                        <p class="card-text text-muted">
-                            Intel Core i7 · 16GB RAM · SSD 512GB
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$899</span>
-
-                            <button class="btn btn-primary">
-                                <i class="bi bi-cart-plus"></i>
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-secondary">
+                        Espacios privados y atención discreta
+                        para que disfrutes sin preocupaciones.
+                    </p>
 
                 </div>
+
             </div>
 
 
-            <!-- PRODUCTO 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-sm">
+            <div class="col-md-4">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80"
-                        class="card-img-top"
-                        alt="PC Gamer">
+                <div class="feature-box text-center">
 
-                    <div class="card-body">
-                        <span class="badge bg-danger">Gaming</span>
+                    <i class="bi bi-clock-history"></i>
 
-                        <h4 class="card-title mt-2">
-                            PC Gamer Xtreme
-                        </h4>
+                    <h4 class="mt-3">
+                        Por horas
+                    </h4>
 
-                        <p class="card-text text-muted">
-                            Ryzen 7 · 32GB RAM · RTX · SSD 1TB
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$1,499</span>
-
-                            <button class="btn btn-primary">
-                                <i class="bi bi-cart-plus"></i>
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-secondary">
+                        Elige la duración de tu estadía según
+                        tus necesidades.
+                    </p>
 
                 </div>
+
             </div>
 
 
-            <!-- PRODUCTO 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card product-card h-100 shadow-sm">
+            <div class="col-md-4">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80"
-                        class="card-img-top"
-                        alt="Computadora de escritorio">
+                <div class="feature-box text-center">
 
-                    <div class="card-body">
-                        <span class="badge bg-success">Oficina</span>
+                    <i class="bi bi-stars"></i>
 
-                        <h4 class="card-title mt-2">
-                            Desktop Business
-                        </h4>
+                    <h4 class="mt-3">
+                        Experiencia premium
+                    </h4>
 
-                        <p class="card-text text-muted">
-                            Intel Core i5 · 16GB RAM · SSD 512GB
-                        </p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price">$699</span>
-
-                            <button class="btn btn-primary">
-                                <i class="bi bi-cart-plus"></i>
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-secondary">
+                        Habitaciones cuidadosamente preparadas
+                        para una experiencia especial.
+                    </p>
 
                 </div>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 
-<!-- BENEFICIOS -->
-<section class="py-5">
+<!-- RESERVA -->
+<section class="reservation py-5" id="reservas">
+
     <div class="container">
 
-        <div class="text-center mb-5">
-            <h2 class="section-title">¿Por qué elegirnos?</h2>
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="text-center mb-4">
+
+                    <h2 class="fw-bold">
+                        Reserva tu habitación
+                    </h2>
+
+                    <p>
+                        Selecciona tu habitación y horario.
+                    </p>
+
+                </div>
+
+                <div class="card bg-dark border-0 shadow-lg p-4">
+
+                    <form>
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Nombre
+                                </label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Tu nombre"
+                                       required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Teléfono
+                                </label>
+
+                                <input type="tel"
+                                       class="form-control"
+                                       placeholder="999 999 999"
+                                       required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Habitación
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+                                        Habitación Clásica
+                                    </option>
+
+                                    <option>
+                                        Habitación Premium
+                                    </option>
+
+                                    <option>
+                                        Suite Jacuzzi
+                                    </option>
+
+                                    <option>
+                                        Suite VIP
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Duración
+                                </label>
+
+                                <select class="form-select">
+
+                                    <option>
+                                        3 horas
+                                    </option>
+
+                                    <option>
+                                        6 horas
+                                    </option>
+
+                                    <option>
+                                        12 horas
+                                    </option>
+
+                                    <option>
+                                        24 horas
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Fecha
+                                </label>
+
+                                <input type="date"
+                                       class="form-control"
+                                       required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Hora de llegada
+                                </label>
+
+                                <input type="time"
+                                       class="form-control"
+                                       required>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button type="submit"
+                                        class="btn btn-love w-100 btn-lg">
+
+                                    <i class="bi bi-heart-fill"></i>
+                                    Solicitar reserva
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="benefit text-center shadow-sm">
-                    <i class="bi bi-truck fs-1 text-primary"></i>
-                    <h4 class="mt-3">Envíos rápidos</h4>
-                    <p class="text-muted">
-                        Recibe tus productos de forma rápida y segura.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="benefit text-center shadow-sm">
-                    <i class="bi bi-shield-check fs-1 text-success"></i>
-                    <h4 class="mt-3">Compra segura</h4>
-                    <p class="text-muted">
-                        Protegemos tus compras y tus datos personales.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="benefit text-center shadow-sm">
-                    <i class="bi bi-headset fs-1 text-info"></i>
-                    <h4 class="mt-3">Soporte técnico</h4>
-                    <p class="text-muted">
-                        Nuestro equipo está listo para ayudarte.
-                    </p>
-                </div>
-            </div>
-
-        </div>
     </div>
-</section>
 
-
-<!-- CTA -->
-<section class="py-5 bg-primary text-white">
-    <div class="container text-center">
-        <h2>¿Listo para mejorar tu computadora?</h2>
-        <p class="lead">
-            Encuentra el equipo ideal para ti.
-        </p>
-
-        <a href="#productos" class="btn btn-light btn-lg">
-            Ver catálogo
-        </a>
-    </div>
 </section>
 
 
 <!-- FOOTER -->
-<footer class="py-5" id="contacto">
+<footer class="py-5">
+
     <div class="container">
 
         <div class="row">
 
             <div class="col-md-6">
-                <h4 class="text-info">
-                    <i class="bi bi-pc-display"></i>
-                    TechComputers
+
+                <h4 class="text-danger">
+                    <i class="bi bi-heart-fill"></i>
+                    Amor & Relax
                 </h4>
 
                 <p class="text-secondary">
-                    Tecnología, rendimiento y calidad para todos.
+                    Momentos especiales merecen un lugar especial.
                 </p>
+
+                <div class="social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+
             </div>
 
+
             <div class="col-md-3">
-                <h5>Enlaces</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#inicio" class="text-secondary text-decoration-none">Inicio</a></li>
-                    <li><a href="#categorias" class="text-secondary text-decoration-none">Categorías</a></li>
-                    <li><a href="#productos" class="text-secondary text-decoration-none">Productos</a></li>
+
+                <h5>Información</h5>
+
+                <ul class="list-unstyled text-secondary">
+
+                    <li class="mb-2">
+                        Habitaciones por horas
+                    </li>
+
+                    <li class="mb-2">
+                        Atención todos los días
+                    </li>
+
+                    <li class="mb-2">
+                        Atención privada
+                    </li>
+
                 </ul>
+
             </div>
 
-            <div class="col-md-3">
-                <h5>Contacto</h5>
-                <p class="text-secondary mb-1">
-                    <i class="bi bi-envelope"></i>
-                    contacto@techcomputers.com
-                </p>
 
-                <p class="text-secondary">
+            <div class="col-md-3">
+
+                <h5>Contacto</h5>
+
+                <p class="text-secondary mb-2">
                     <i class="bi bi-telephone"></i>
                     +51 999 999 999
                 </p>
+
+                <p class="text-secondary">
+                    <i class="bi bi-geo-alt"></i>
+                    Lima, Perú
+                </p>
+
             </div>
 
         </div>
 
         <hr class="border-secondary">
 
-        <div class="text-center text-secondary">
-            © 2026 TechComputers. Todos los derechos reservados.
-        </div>
+        <p class="text-center text-secondary mb-0">
+            © 2026 Amor & Relax — Todos los derechos reservados.
+        </p>
 
     </div>
+
 </footer>
 
 
